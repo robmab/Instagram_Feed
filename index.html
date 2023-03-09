@@ -4,41 +4,345 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <title>Document</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"></head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Instagram Feed con Bootstrap</title>
 <body>
-  
-  <header>
-    <div class="container-fluid bg-light">
-      <div class="py-2 row ">
-        
-          <div class="col-6 d-flex">  
-            <img class="mt-1" src="https://cdn-icons-png.flaticon.com/512/87/87390.png" width="20px" height="20px" alt="">
-            <h5 class="ms-1">Instagram</h5>
-          </div>
 
-          <div class="col-6 d-flex justify-content-end"> 
-              <button class="btn btn-success mx-2">Create new post</button>       
-              <button class="btn btn-secondary">
-                <i class="fa-solid fa-gear "></i>
-                <i class="fa-sharp fa-solid fa-caret-down "></i>
-              </button>   
-          </div>  
-     
+<div class="container-fluid ">
+  <header>
+  
+    <div class="py-2 row bg-light ">
+      <!-- LOGO   -->
+      <div class="col-6 d-flex">  
+        <img class="mt-1" src="https://cdn-icons-png.flaticon.com/512/87/87390.png" width="20px" height="20px" alt="">
+        <h5 class="ms-1">Instagram</h5>
+      </div>
+      <!-- LOGO END  -->
+      <!-- CONFIGURE, POST -->
+      <div class="col-6 d-flex justify-content-end"> 
+        <button class="btn btn-success mx-2" data-bs-toggle="modal" data-bs-target="#post">Create new post</button>       
+          <button class="btn btn-secondary dropdown-toggle" type="button"  data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-gear "></i>
+          </button>
+          <ul class="dropdown-menu ">
+            <li><a class="dropdown-item fw-medium" href="#">Profile</a></li>
+            <li><a class="dropdown-item fw-medium" href="#">Accesibility</a></li>
+            <li><a class="dropdown-item fw-medium" href="#">Privacy and Data</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item fw-medium text-danger" href="#">Logout</a></li>
+          </ul>       
+      </div>  
+     <!-- CONFIGURE, POST END-->
+    </div>
+  </header>
+
+  <main>
+    <!-- TAB LIST -->
+    <div class="row text-center justify-content-center">
+
+      <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link " id="1-tab" data-bs-toggle="tab" data-bs-target="#1" type="button" role="tab" aria-controls="1-tab" aria-selected="false"><i class="m-3 mt-4 fa-solid fa-table-cells"></i></button>        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active " id="2-tab" data-bs-toggle="tab" data-bs-target="#2" type="button" role="tab" aria-controls="2-tab" aria-selected="true"><i class="m-3 mt-4 fa-solid fa-square"></i></button>
+        </li>
+      </ul>
+
+    </div>
+    <!-- TAB LIST END-->
+  <div class="tab-content" id="myTabContent">
+    <!-- GRID PANEL 1-->
+    <div class="tab-pane fade" id="1" role="tabpanel" aria-labelledby="1-tab">
+      <div  class="row g-0 ">
+        <div  class="col-4  ">
+          <img class="p-1 pt-0 pb-2" height="100%" width="100%" src="https://cdn.pixabay.com/photo/2023/02/26/14/04/deer-7815910__340.jpg" alt="">
+        </div>
+        <div  class="col-4 ">
+          <img class="p-1 pt-0 pb-2" height="100%" width="100%" src="https://cdn.pixabay.com/photo/2023/02/03/13/36/marine-7765155__340.jpg" alt="">
+        </div>
+        <div  class="col-4  ">
+          <img class="p-1 pt-0 pb-2" height="100%" width="100%" src="https://cdn.pixabay.com/photo/2023/02/04/13/06/station-7767132__340.jpg" alt="">
+        </div>
+      
+        <div  class="col-4 ">
+          <img class="p-1 pt-0 pb-2" height="100%" width="100%" src="https://cdn.pixabay.com/photo/2022/11/20/09/06/night-view-7603847__340.jpg" alt="">
+        </div>
+        <div  class="col-4  ">
+          <img class="p-1 pt-0 pb-2" height="100%" width="100%" src="https://cdn.pixabay.com/photo/2023/02/01/16/26/animal-7760773__340.jpg" alt="">
+        </div>
+        <div  class="col-4 ">
+          <img class="p-1 pt-0 pb-2" height="100%" width="100%" src="https://cdn.pixabay.com/photo/2022/10/31/20/27/lioness-7560708__340.jpg" alt="">
+        </div>
+        <div  class="col-4  ">
+          <img class="p-1 pt-0 pb-2" height="100%" width="100%" src="https://cdn.pixabay.com/photo/2022/08/22/13/38/sea-7403739__340.jpg" alt="">
+        </div>
+        <div  class="col-4  ">
+          <img class="p-1 pt-0 pb-2" height="100%" width="100%" src="https://cdn.pixabay.com/photo/2023/01/27/14/56/boat-7748824__340.jpg" alt="">
+        </div>
+        <div  class="col-4 ">
+          <img class="p-1 pt-0 pb-2" height="100%" width="100%" src="https://cdn.pixabay.com/photo/2023/01/22/17/57/scooter-7737073__340.jpg" alt="">
+        </div>
+        <div  class="col-4 ">
+          <img class="p-1 pt-0 pb-2" height="100%" width="100%" src="https://cdn.pixabay.com/photo/2023/01/24/10/38/rope-7740707__340.jpg" alt="">
+        </div>
+        <div  class="col-4">
+          <img class="p-1 pt-0 pb-2" height="100%" width="100%" src="https://cdn.pixabay.com/photo/2022/10/14/09/11/building-7520849__340.jpg" alt="">
+        </div>
+        <div  class="col-4 ">
+          <img  class="p-1 pt-0 pb-2"height="100%" width="100%" src="https://cdn.pixabay.com/photo/2023/01/14/18/17/hot-air-balloon-7718789__340.jpg" alt="">
+        </div>
       </div>
     </div>
-    
-  </header>
-  
-  <main>
-  </main>
-  <footer>
-  </footer>
-  <script src="scripts.js"></script>
+    <!-- GRID PANEL 1 END-->
+    <!-- LIST PANEL 2 -->
+    <div class="tab-pane fade show active" id="2" role="tabpanel" aria-labelledby="2-tab">
+      <div class="row g-0  justify-content-center" >
+
+        <div class="card mb-5 col-6 mx-5" >
+          <div class="card-body p-0 px-0 ">
+            <div class="d-flex px-2" >
+              <h3 class="card-title py-1 pt-2">Deer!</h3>  
+              <p class="ms-auto fw-medium"><small>08/26</small></p>      
+            </div>     
+            <div class="g-0 px-0 ">
+              <img width="100%" src="https://cdn.pixabay.com/photo/2023/02/26/14/04/deer-7815910__340.jpg" alt="">
+            </div>
+            <div class="p-2">
+              <p class="m-0 fw-bold">2340 Likes</p>
+              <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-5 col-6 mx-5" >
+          <div class="card-body p-0 px-0 ">
+            <div class="d-flex px-2" >
+              <h3 class="card-title py-1 pt-2">Marine</h3>  
+              <p class="ms-auto fw-medium"><small>01/16</small></p>      
+            </div>     
+            <div class="g-0 px-0 ">
+              <img width="100%" src="https://cdn.pixabay.com/photo/2023/02/03/13/36/marine-7765155__340.jpg" alt="">
+            </div>
+            <div class="p-2">
+              <p class="m-0 fw-bold">456 Likes</p>
+              <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of the card's content.
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-5 col-6 mx-5" >
+          <div class="card-body p-0 px-0 ">
+            <div class="d-flex px-2" >
+              <h3 class="card-title py-1 pt-2">Station</h3>  
+              <p class="ms-auto fw-medium"><small>1/3</small></p>      
+            </div>     
+            <div class="g-0 px-0 ">
+              <img width="100%" src="https://cdn.pixabay.com/photo/2023/02/04/13/06/station-7767132__340.jpg" alt="">
+            </div>
+            <div class="p-2">
+              <p class="m-0 fw-bold">4 Likes</p>
+              <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-5 col-6 mx-5" >
+          <div class="card-body p-0 px-0 ">
+            <div class="d-flex px-2" >
+              <h3 class="card-title py-1 pt-2">Night view</h3>  
+              <p class="ms-auto fw-medium"><small>045/103</small></p>      
+            </div>     
+            <div class="g-0 px-0 ">
+              <img width="100%" src="https://cdn.pixabay.com/photo/2022/11/20/09/06/night-view-7603847__340.jpg" alt="">
+            </div>
+            <div class="p-2">
+              <p class="m-0 fw-bold">42340 Likes</p>
+              <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of the card's content.
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-5 col-6 mx-5" >
+          <div class="card-body p-0 px-0 ">
+            <div class="d-flex px-2" >
+              <h3 class="card-title py-1 pt-2">Animal</h3>  
+              <p class="ms-auto fw-medium"><small>3/8</small></p>      
+            </div>     
+            <div class="g-0 px-0 ">
+              <img width="100%" src="https://cdn.pixabay.com/photo/2023/02/01/16/26/animal-7760773__340.jpg" alt="">
+            </div>
+            <div class="p-2">
+              <p class="m-0 fw-bold">57 Likes</p>
+              <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-5 col-6 mx-5" >
+          <div class="card-body p-0 px-0 ">
+            <div class="d-flex px-2" >
+              <h3 class="card-title py-1 pt-2">Lioness</h3>  
+              <p class="ms-auto fw-medium"><small>13/17</small></p>      
+            </div>     
+            <div class="g-0 px-0 ">
+              <img width="100%" src="https://cdn.pixabay.com/photo/2022/10/31/20/27/lioness-7560708__340.jpg" alt="">
+            </div>
+            <div class="p-2">
+              <p class="m-0 fw-bold">167 Likes</p>
+              <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of the card's content.
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-5 col-6 mx-5" >
+          <div class="card-body p-0 px-0 ">
+            <div class="d-flex px-2" >
+              <h3 class="card-title py-1 pt-2">Sea</h3>  
+              <p class="ms-auto fw-medium"><small>01/29</small></p>      
+            </div>     
+            <div class="g-0 px-0 ">
+              <img width="100%" src="https://cdn.pixabay.com/photo/2022/08/22/13/38/sea-7403739__340.jpg" alt="">
+            </div>
+            <div class="p-2">
+              <p class="m-0 fw-bold">130987 Likes</p>
+              <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of the card's content.
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-5 col-6 mx-5" >
+          <div class="card-body p-0 px-0 ">
+            <div class="d-flex px-2" >
+              <h3 class="card-title py-1 pt-2">Boat</h3>  
+              <p class="ms-auto fw-medium"><small>02/86</small></p>      
+            </div>     
+            <div class="g-0 px-0 ">
+              <img width="100%" src="https://cdn.pixabay.com/photo/2023/01/27/14/56/boat-7748824__340.jpg" alt="">
+            </div>
+            <div class="p-2">
+              <p class="m-0 fw-bold">795 Likes</p>
+              <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-5 col-6 mx-5" >
+          <div class="card-body p-0 px-0 ">
+            <div class="d-flex px-2" >
+              <h3 class="card-title py-1 pt-2">Scooter</h3>  
+              <p class="ms-auto fw-medium"><small>3/6</small></p>      
+            </div>     
+            <div class="g-0 px-0 ">
+              <img width="100%" src="https://cdn.pixabay.com/photo/2023/01/22/17/57/scooter-7737073__340.jpg" alt="">
+            </div>
+            <div class="p-2">
+              <p class="m-0 fw-bold">15 Likes</p>
+              <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of the card's content.
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-5 col-6 mx-5" >
+          <div class="card-body p-0 px-0 ">
+            <div class="d-flex px-2" >
+              <h3 class="card-title py-1 pt-2">Rope</h3>  
+              <p class="ms-auto fw-medium"><small>08/30</small></p>      
+            </div>     
+            <div class="g-0 px-0 ">
+              <img width="100%" src="https://cdn.pixabay.com/photo/2023/01/24/10/38/rope-7740707__340.jpg" alt="">
+            </div>
+            <div class="p-2">
+              <p class="m-0 fw-bold">123 Likes</p>
+              <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-5 col-6 mx-5" >
+          <div class="card-body p-0 px-0 ">
+            <div class="d-flex px-2" >
+              <h3 class="card-title py-1 pt-2">Building</h3>  
+              <p class="ms-auto fw-medium"><small>5/5</small></p>      
+            </div>     
+            <div class="g-0 px-0 ">
+              <img width="100%" src="https://cdn.pixabay.com/photo/2022/10/14/09/11/building-7520849__340.jpg" alt="">
+            </div>
+            <div class="p-2">
+              <p class="m-0 fw-bold">958 Likes</p>
+              <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-5 col-6 mx-5" >
+          <div class="card-body p-0 px-0 ">
+            <div class="d-flex px-2" >
+              <h3 class="card-title py-1 pt-2">Hot air ballon</h3>  
+              <p class="ms-auto fw-medium"><small>24/98</small></p>      
+            </div>     
+            <div class="g-0 px-0 ">
+              <img width="100%" src="https://cdn.pixabay.com/photo/2023/01/14/18/17/hot-air-balloon-7718789__340.jpg" alt="">
+            </div>
+            <div class="p-2">
+              <p class="m-0 fw-bold">2340670 Likes</p>
+              <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of the card's content.
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        
+
+      </div>  
+    </div>
+    <!-- LIST PANEL 2 END-->
+  </div>  
+
+    </main>
+  </div>
+  <!-- MODAL -->
+  <div class="modal fade" id="post" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="#">
+          <div class="modal-body">
+            <p class="fw-medium mb-1">Caption:</p>
+            <textarea class="w-100 form-control mb-3 bg-light-subtle" placeholder="Add the caption of your post here"></textarea>
+            <button class="btn btn-outline-dark bg-light-subtle border-secondary-subtle me-1 mb-3"><i class="fa-sharp fa-solid fa-camera text-dark"></i></button>
+            <button class="btn btn-outline-dark bg-light-subtle border-secondary-subtle mb-3"><i class="fa-sharp fa-solid fa-location-dot text-dark"> </i></button>
+          </div>
+          <div class="modal-footer">    
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-success">Publish</button> 
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL END-->
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/163b8332ba.js" crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
 
 </body>
 </html>
